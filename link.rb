@@ -29,7 +29,7 @@ class Link < Post
 	# Метод to_string для ссылки возвращает массив из трех строк: адрес ссылки,
   # описание ссылки и строка с датой создания ссылки.
 	def to_strings
-		time_string = "Создано: #{created_at.strftime('%Y.%m.%d, %H:%M:%S')} \n\r"
+		time_string = "Создано: #{@created_at.strftime('%Y.%m.%d, %H:%M:%S')} \n\r"
 
 		[@url, @text, time_string]
 	end

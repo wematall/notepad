@@ -30,7 +30,7 @@ class Task < Post
     # подскажем формат, в котором нужно вводить дату. А потом запишем его ответ
     # в локальную переменную input.
     puts 'К какому числу? Укажите дату в формате ДД.ММ.ГГГГ, ' \
-      'например 12.05.2003'
+      'например 12.05.2023'
     input = STDIN.gets.chomp
 
     # Для того, чтобы из строки получить объект класса Date, с которым очень
@@ -47,7 +47,7 @@ class Task < Post
 	def to_strings
 		# todo
 		deadline = "Крайний срок: #{@due_date.strftime('%Y.%m.%d')}"
-		time_string = "Создано: #{@created_at.strftime('%Y.%m.%, %H:%M:%S')} \n\r"
+		time_string = "Создано: #{@created_at.strftime('%Y.%m.%d, %H:%M:%S')} \n\r"
 
 		[deadline, @text, time_string]
 	end
